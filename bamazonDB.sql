@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS songsdb;
+
+USE songsdb;
+
