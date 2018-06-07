@@ -46,7 +46,7 @@ connection.query('SELECT * FROM products', function(err, results){
                     connection.query('UPDATE products SET stockQuantity = "' + (res[0].stockQuantity - answers.selectedQuantity) + '" WHERE itemId ="' + answers.selectedId + '"', function(e){
                         if(e) throw e;
                     });
-                    console.log(answers.selectedQuantity * res[0].price);
+                    console.log('The cost of your purchase was: $' + answers.selectedQuantity * res[0].price + ' Thank you for shopping with us!');
                 }
             }
             connection.end();
@@ -54,4 +54,3 @@ connection.query('SELECT * FROM products', function(err, results){
         
     });
 });
-
